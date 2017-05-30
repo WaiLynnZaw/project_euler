@@ -6,11 +6,11 @@ func fibs1(through: Int) -> AnySequence<Int> {
                         return pair.1
     }).prefix(while: { $0 <= through })
 }
-var result = 0
-fibs1(through: 4000000).forEach {
-    if $0 % 2 == 0 {
-        result += $0
-    }
-}
-print(result)
+//var result = 0
+//fibs1(through: 4000000).forEach {
+//    if $0 % 2 == 0 {
+//        result += $0
+//    }
+//}
+//print(result)
 

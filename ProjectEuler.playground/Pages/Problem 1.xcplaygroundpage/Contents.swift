@@ -7,4 +7,4 @@ func sumOfMultiples(num: Int, divisables: Int...) -> Int {
     return multiples.reduce(0) { $0 + $1 }
 
 }
-print(sumOfMultiples(num: 1000, divisables: 3,5))
+//print(sumOfMultiples(num: 1000, divisables: 3,5))
