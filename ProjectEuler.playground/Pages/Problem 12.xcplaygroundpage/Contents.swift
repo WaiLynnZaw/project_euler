@@ -24,6 +24,14 @@ import Foundation
 //}
 
 //getNumber()
+
+/*
+ 
+ Optimized Version
+ 
+ */
+
+
 func countDivisors(n : Int) -> Int {
     var n = n
     var numDivisors = 1
@@ -62,3 +70,53 @@ func getNumber(requiredDivisors : Int) -> Int {
 }
 
 //print(getNumber(requiredDivisors: 500))
+
+
+/*
+ 
+    More Optimized Version
+ 
+*/
+
+
+
+func getDivisibleNumber(input: Int) {
+    var n = 3
+    var Dn = 2
+    var cont = 0
+    let p = 1000
+    var n1, Dn1, exponent: Int
+    var primeArray = [Int](1...p)
+
+    while cont <= input {
+        n = n+1;
+        n1 = n;
+        if n1 % 2 == 0 {
+            n1 = n1/2
+        }
+        Dn1 = 1;
+        for i in 1...p {
+            if primeArray[i] * primeArray[i] > n1 {
+                Dn1 = 2*Dn1
+                break
+            }
+            exponent = 1
+
+            while n1 % primeArray[i] == 0 {
+                exponent += 1;
+                n1 = n1/primeArray[i];
+            }
+
+            if exponent > 1 {
+                Dn1 = Dn1*exponent
+            }
+            if n1 == 1 {
+                break
+            }
+        }
+        cont = Dn*Dn1
+        Dn = Dn1
+    }
+    print(n*(n-1)/2)
+}
+//getDivisibleNumber(input: 500)
