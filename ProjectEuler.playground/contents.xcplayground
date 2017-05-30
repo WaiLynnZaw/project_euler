@@ -2,6 +2,12 @@
 <playground version='6.0' target-platform='ios'>
     <pages>
         <page name='Problem 2'/>
-        <page name='Untitled Page'/>
+        <page name='Problem 3'/>
+        <page name='Problem 4'/>
+        <page name='Problem 5'/>
+        <page name='Problem 6'/>
+        <page name='Problem 7'/>
+        <page name='Problem 8'/>
+        <page name='Problem 9'/>
     </pages>
 </playground>
